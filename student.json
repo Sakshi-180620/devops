@@ -1,0 +1,44 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Sakshi",
+      "age": 21,
+      "branch": "CSE",
+      "email": "sakshi@gmail.com",
+      "marks": 85
+    },
+    {
+      "id": 2,
+      "name": "Rahul",
+      "age": 22,
+      "branch": "IT",
+      "email": "rahul@gmail.com",
+      "marks": 78
+    },
+    {
+      "id": 3,
+      "name": "Priya",
+      "age": 21,
+      "branch": "ECE",
+      "email": "priya@gmail.com",
+      "marks": 91
+    },
+    {
+      "id": 4,
+      "name": "Aman",
+      "age": 22,
+      "branch": "CSE",
+      "email": "aman@gmail.com",
+      "marks": 74
+    },
+    {
+      "id": 5,
+      "name": "Neha",
+      "age": 21,
+      "branch": "IT",
+      "email": "neha@gmail.com",
+      "marks": 88
+    }
+  ]
+}
