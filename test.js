@@ -1,19 +1,38 @@
+
+const fs = require("fs");
+
 function checkFile(fileName) {
-    fetch(fileName)
-        .then(response => {
-            if (response.ok) {
-                console.log(fileName + " : File Exists");
-            } else {
-                console.log(fileName + " : File Not Found");
-            }
-        })
-        .catch(error => {
-            console.log(fileName + " : File Not Found");
-        });
+
+    if (fs.existsSync(fileName)) {
+        console.log(fileName + " : File Exists");
+        return true;
+    } else {
+        console.error(fileName + " : File Not Found");
+        return false;
+    }
 }
 
-// Test Cases
-checkFile("indexx.html");
-checkFile("style.css");
-checkFile("script.js");
-checkFile("test.js");
+const files = [
+    "indexx.html",
+    "style.css",
+    "script.js",
+    "test.js"
+];
+
+let allPassed = true;
+
+files.forEach(function(file) {
+
+    if (!checkFile(file)) {
+        allPassed = false;
+    }
+
+});
+
+if (!allPassed) {
+    console.error("TEST FAILED");
+    process.exit(1);
+} else {
+    console.log("ALL TESTS PASSED");
+    process.exit(0);
+}
